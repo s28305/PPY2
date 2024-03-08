@@ -110,26 +110,33 @@ Extend the previous Python program to demonstrate the manipulation of lists usin
 """
 
 # Input
-input_numbers = input("Enter a series of space-separated integers: ")
+input_numbers2 = input("Enter a series of space-separated integers: ")
 
 # Convert Input
-
+numbers_list = [int(i) for i in input_numbers.split()]
+numbers_tuple = tuple((int(i) for i in input_numbers.split()))
 
 # Manipulate List
 #   Append 10 to the list
+numbers_list.append(10)
 #   Insert 20 at index 2
+numbers_list.insert(20, 2)
 #   Remove one elementfrom the list
+numbers_list.remove(10)
 
 # Attempt to Modify Tuple (this will raise an error)
 try:
 # Append 10 to the tuple
+    numbers_tuple.append(10)
 except AttributeError:
     print("Tuples are immutable and cannot be modified.")
 try:
 # Insert 20 at index 2
+    numbers_tuple.insert(20, 2)
 except AttributeError:
     pass  # Insert operation will also raise an error
 try:
+    numbers_tuple.remove(10)
 # Remove one element  from the tuple
 except AttributeError:
     pass  # Remove operation will also raise an error
