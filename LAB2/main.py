@@ -31,10 +31,10 @@ Write a Python program that takes input from the user to create a list of intege
 input_numbers = input("Enter a series of space-separated integers: ")
 
 # Convert Input:
-
+numbers_list = [int(i) for i in input_numbers.split()]
 
 # Sorting:
-
+numbers_list.sort()
 
 # Print Output
 print("Sorted list:", numbers_list)
@@ -49,7 +49,6 @@ Lists have methods like append(), insert(), and remove() to modify the list, whi
 Lists are typically used when the elements need to be modified or updated frequently, while tuples are used when the data is meant to be constant or unchangeable.
 
 -----------------------------------------------------------------------------
-
 4.
 Extend the previous Python program to include tuples. Now, in addition to creating a list of integers from user input, the program should also create a tuple of those integers and perform the following operations:
 
@@ -449,3 +448,4 @@ These are fundamental constructs in Python programming that enable you to contro
 """10.
 In the final main.py file, leave the results from task 8 and 9, commit and push
 """
+
