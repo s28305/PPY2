@@ -206,6 +206,12 @@ input_numbers = input("Enter a series of space-separated integers: ")
 # Convert Input
 numbers_list = [int(i) for i in input_numbers.split()]
 numbers_tuple = tuple((int(i) for i in input_numbers.split()))
+set1 = set((int(i) for i in input_numbers.split()))
+
+set2 = {2, 4, 55, 17, 8, 10}
+
+numbers_dict = {1: 10, 2: 7, 4: 5}
+
 
 # Manipulate List
 #   Append 10 to the list
@@ -213,7 +219,8 @@ numbers_list.append(10)
 #   Insert 20 at index 2
 numbers_list.insert(20, 2)
 # Remove the element 8
-numbers_list.remove(8)
+if (numbers_list.__contains__(8)):
+    numbers_list.remove(8)
 
 # Attempt to Modify Tuple (this will raise an error)
 try:
@@ -224,13 +231,18 @@ except AttributeError:
 
 # Set Operations
 # Union
+    set_union = set1.union(set2)
 # Intersection
+    set_intersection = set1.intersection(set2)
 # Difference
+    set_difference = set1.difference(set2)
 
 # Dictionary Operations
 print("Original Dictionary:", numbers_dict)
 # Add a new key-value pair
+numbers_dict[3] = 14
 # Delete an existing key-value pair
+del numbers_dict[4]
 
 # Print Output
 print("Modified list:", numbers_list)
